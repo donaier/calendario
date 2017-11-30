@@ -59,17 +59,7 @@ img {
   transform-origin: 0% 0%;
   -webkit-transform-origin: 0% 0%;
   cursor: pointer;
-}
 
-.door.normal, .door.gross {
-  z-index: 1;
-  &.open {
-    transform: rotateY(-100deg);
-    -webkit-transform: rotateY(-100deg);
-  }
-}
-
-.door {
   h1 {
     color: #f66;
     text-align: left;
@@ -78,20 +68,26 @@ img {
   }
   &.zu {
     background-color: #f99;
+    background-image: url('ribbon_zu.png');
     h1 {
       color: #fee;
     }
   }
   &.gross {
     background-color: #49ff80;
+    background-image: url('ribbon_special.png');
     h1 {
-      color: #07ba28;
+      color: #fff;
     }
   }
 }
 
-.prize img {
-  // height: 30%;
+.door.normal, .door.gross {
+  z-index: 1;
+  &.open {
+    transform: rotateY(-100deg);
+    -webkit-transform: rotateY(-100deg);
+  }
 }
 
 // show
