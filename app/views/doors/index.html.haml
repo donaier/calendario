@@ -5,14 +5,14 @@
     .col-1-3.mobile-col-1-3
       .content
         .day
-          - if door.kind == 'normal' || door.kind == 'gross'
+          - if door.isopen?
             = image_tag "door0.png"
             .door.normal
               %h1= door.number
             .prize
               = link_to door_path(door) do
                 = image_tag "door#{door.number}.png"
-          - if door.kind == 'zu'
+          - else
             = image_tag "door0.png"
             .door.zu
               %h1= door.number
