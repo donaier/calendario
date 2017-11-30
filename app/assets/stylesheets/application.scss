@@ -61,7 +61,7 @@ img {
   cursor: pointer;
 }
 
-.door.normal {
+.door.normal, .door.gross {
   z-index: 1;
   &.open {
     transform: rotateY(-100deg);
@@ -69,16 +69,24 @@ img {
   }
 }
 
-.door h1 {
-  color: red;
-  text-align: left;
-  margin-top: 2px;
-  margin-left: 2px;
-}
-.door.zu {
-  background-color: #999;
+.door {
   h1 {
-    color: grey;
+    color: #f66;
+    text-align: left;
+    margin-top: 2px;
+    margin-left: 2px;
+  }
+  &.zu {
+    background-color: #f99;
+    h1 {
+      color: #fee;
+    }
+  }
+  &.gross {
+    background-color: #49ff80;
+    h1 {
+      color: #07ba28;
+    }
   }
 }
 

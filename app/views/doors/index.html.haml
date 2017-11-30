@@ -7,11 +7,11 @@
         .day
           - if door.isopen?
             = image_tag "door0.png"
-            .door.normal
+            .door{ class: door.kind }
               %h1= door.number
             .prize
               = link_to door_path(door) do
-                = image_tag "door#{door.number}.png"
+                = image_tag "door#{door.number}.jpg"
           - else
             = image_tag "door0.png"
             .door.zu
