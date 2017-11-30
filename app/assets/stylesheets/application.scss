@@ -1,0 +1,96 @@
+
+@import "simplegrid";
+@use postcss-cssnext;
+
+body {
+  background-color: #e10000;
+  background-image: url('bg.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+  background-size: contain;
+  font-family: 'verdana';
+}
+
+img {
+  max-width: 100%;
+
+  &.titleimage {
+    margin-top: 20px;
+    margin-bottom: -30px;
+  }
+}
+
+.calendario {
+  text-align: center;
+}
+
+// törli
+.day {
+  display: inline-flex;
+  perspective: 1500px;
+  position: relative;
+ }
+ .day, .door {
+  border-radius: 20%;
+  width: 100%;
+  height: 100%;
+
+  img {
+    border-radius: 20%;
+  }
+}
+
+.door, .prize {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.door {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('ribbon.png');
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  display: inline-block;
+  transition: all 0.75s ease;
+  -webkit-transition: all 0.75s ease;
+  transform-origin: 0% 0%;
+  -webkit-transform-origin: 0% 0%;
+  cursor: pointer;
+}
+
+.door.normal {
+  z-index: 1;
+  &.open {
+    transform: rotateY(-100deg);
+    -webkit-transform: rotateY(-100deg);
+  }
+}
+
+.door h1 {
+  color: red;
+  text-align: left;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+.door.zu {
+  background-color: #999;
+  h1 {
+    color: grey;
+  }
+}
+
+.prize img {
+  // height: 30%;
+}
+
+// show
+.detail {
+  color: white;
+  h1 {
+    text-align: center;
+    padding-top: 20px;
+  }
+}
