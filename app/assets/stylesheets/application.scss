@@ -90,6 +90,11 @@ img {
 .detail {
   color: white;
   text-align: center;
+  a {
+    text-align: left;
+    text-decoration: none;
+    color: white;
+  }
   h1 {
     padding-top: 20px;
   }
