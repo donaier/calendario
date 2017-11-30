@@ -1,7 +1,6 @@
 .detail
 
   %h1= @door.title
-  = image_tag "detail#{@door.number}.jpg"
-  %p= @door.content
   = link_to doors_path do
-    %h2 <<
+    = image_tag "detail#{@door.number}.jpg"
+  %p= @door.content.html_safe
